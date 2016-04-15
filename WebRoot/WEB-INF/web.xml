@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/log4j.properties</param-value>
+	</context-param>
+	<listener>
+  	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+ 	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>Management</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Management</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>/jsp/login.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!--
+	
+	
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>WEB-INF/log4j.properties</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.bmm.listener.OpenConnectListener</listener-class>
+	</listener>
+	<servlet-mapping>
+		<servlet-name>EmailServlet</servlet-name>
+		<url-pattern>/EmailServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmailServlet</servlet-name>
+		<servlet-class>com.bmm.controller.TestServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmailServlet</servlet-name>
+		<url-pattern>/EmailServlet</url-pattern>
+	</servlet-mapping>
+	
+	 
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>backmgmod.root</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>ManagerServlet</servlet-name>
+		<servlet-class>com.traffic.servlet.ManagerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManagerServlet</servlet-name>
+		<url-pattern>/ManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ErrorListServlet</servlet-name>
+		<servlet-class>com.traffic.servlet.ErrorListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorListServlet</servlet-name>
+		<url-pattern>/ErrorListServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EmailServlet</servlet-name>
+		<servlet-class>com.traffic.servlet.EmailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmailServlet</servlet-name>
+		<url-pattern>/EmailServlet</url-pattern>
+	</servlet-mapping>
+	 -->
+	 
+	
+</web-app>
